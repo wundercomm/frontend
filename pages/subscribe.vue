@@ -1,9 +1,10 @@
 <script setup lang="ts">
-    const userEmail = ref("");
-    const backendResponse = ref("");
+    import {ref} from "vue"
+    const userEmail = ref("")
+    const backendResponse = ref("")
     async function suscribeToNewsletter() {
         const { data } = await useFetch(`/api/subscribe?email=${userEmail.value}`)
-        backendResponse.value = data
+        backendResponse.value = data as unknown as string
     }
 </script>
 

@@ -5,7 +5,7 @@ const count = ref(0);
 </script>
 <template>
     <div>
-        <h1>         
+        <h1>
             Counter
         </h1>
         {{count}}
