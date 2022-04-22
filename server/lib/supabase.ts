@@ -1,4 +1,4 @@
-import config from '#config'
 import { createClient } from '@supabase/supabase-js'
+const runtimeConfig = useRuntimeConfig()
+export const supabase = createClient(runtimeConfig.supabaseUrl, runtimeConfig.supabaseKey)
 
-export const supabase = createClient(config.supabaseUrl, config.supabaseKey)
